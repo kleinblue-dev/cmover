@@ -1,0 +1,21 @@
+# Build output. The exe is produced by csc from the six .cs files in a couple of
+# seconds -- shipping it in the repo would only mean shipping a stale copy that
+# antivirus flags for no benefit.
+build/
+*.exe
+
+# Artifacts of test/run-test.ps1. The suite cleans up after itself, but a run
+# killed halfway leaves these behind, and they contain a full listing of
+# whatever machine the suite ran on.
+test/test-target/
+test/report*
+test/suite-*.log
+test/cli-out.txt
+test/cli-err.txt
+
+# Editor / OS noise
+*.user
+*.suo
+.vs/
+Thumbs.db
+desktop.ini
